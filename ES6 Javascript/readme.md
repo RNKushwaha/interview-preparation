@@ -5,7 +5,7 @@
 
 | Sr.No|  Questions       |
 |------|------------------|
-| 01. |[What is Object Destructuring in JavaScript?](#q-what-is-the-object-destructuring-in-javascript)|
+| 01. |[What is Object Destructuring in JavaScript?](#q-what-is-object-destructuring-in-javascript)|
 
 
 <br/>
