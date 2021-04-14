@@ -22,8 +22,8 @@ const hero = {
 // how to extract name and realName from hero and assign to variables
 const { name, realName, enemies = ['Joker'] } = hero;
 
-console.log(name); // Batman
-console.log(enemies); // Joker
+console.log(name);
+console.log(enemies);
 ```
 
 <div align="right">
