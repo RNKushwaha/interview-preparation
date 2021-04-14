@@ -26,8 +26,7 @@ console.log(name); // Batman
 console.log(enemies); // Joker
 ```
 <div data-pym-src="https://www.jdoodle.com/embed/v0/3ctT"></div>
-<iframe src="https://www.jdoodle.com/embed/v0/3ctT"></iframe>
-https://www.jdoodle.com/embed/v0/3ctT
+<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
