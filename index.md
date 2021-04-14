@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/RNKushwaha/interview-preparation/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# ES6/ Javascript Interview Questions
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Table of Contents
 
-### Markdown
+| Sr.No|  Questions       |
+|------|------------------|
+| 01. |[What is Object Destructuring in JavaScript?](#q-what-is-object-destructuring-in-javascript)|
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+<br/>
 
-# Header 1
-## Header 2
-### Header 3
+## Q. ***What is Object Destructuring in JavaScript?***
+Object destructuring is a technique to extract properties (single or multiple) from object and bind them to variables in a single line. It can set a default value to variable if the property does not exits in the object.
 
-- Bulleted
-- List
+```js
+const hero = {
+  name: 'Batman',
+  realName: 'Bruce Wayne'
+};
 
-1. Numbered
-2. List
+// how to extract name and realName from hero and assign to variables
+const { name, realName, enemies = ['Joker'] } = hero;
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+console.log(name); // Batman
+console.log(enemies); // Joker
 ```
+<div data-pym-src="https://www.jdoodle.com/embed/v0/3ctT"></div>
+<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RNKushwaha/interview-preparation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
