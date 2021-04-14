@@ -11,7 +11,7 @@
 <br/>
 
 ## Q. ***What is Object Destructuring in JavaScript?***
-Object destructuring is a technique to extract properties (single or multiple) from object and bind them to variables in a single line. It can set a default value to variable if the property does not exits.
+Object destructuring is a technique to extract properties (single or multiple) from object and bind them to variables in a single line. It can set a default value to variable if the property does not exits in the object.
 
 ```js
 const hero = {
