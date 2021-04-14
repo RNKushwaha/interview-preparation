@@ -25,6 +25,8 @@ const { name, realName, enemies = ['Joker'] } = hero;
 console.log(name); // Batman
 console.log(enemies); // Joker
 ```
+<div data-pym-src="https://www.jdoodle.com/embed/v0/3ctT"></div>
+
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
