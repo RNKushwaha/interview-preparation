@@ -1,1 +1,25 @@
-
+- What are React Hooks?
+- What are Class and Functional components in Reactjs?
+- Differentiate Stateful and stateless.
+- What is Ref?
+- Do you know about hierarchical architecture?
+- Can you explain CSS modal in React JS?
+- How JSX is converted into HTML code?
+- JSX converted into Java Script State?
+- How JSX is converted into CSS?
+- What is unmount?
+- Can you tell about the child component in the PROPS?
+- What is the Pure component?
+- What is HOC? When do you use it?
+- What is the CONNECT function?
+- What is State manipulation?
+- What is a profiler?
+- Sessions
+- What are Props & states?
+- How can we maintain states in React applications?
+- What is Redux? Redux and Browser
+- What is FLUX?
+- Does FLUX handle Server side or client side?
+- How can the claim CSS file be used?
+- What is the minimum requirements in AJAX
+- How you can call the APIs? Use Axios
