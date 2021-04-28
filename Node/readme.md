@@ -1,1 +1,24 @@
-
+- What are pros and cons of Node.JS?
+- Whats are Micro services?
+- What does the promise do in Node.js?
+- Node.js File System Module ? What is specific in it?
+- What is Data Modelling?
+- What is the scope in the Javascript?
+- What is the difference between synchronous and asynchronous functions? Give an example of asynchronous functions? In case of multiple requests to be done you use synchronous or asynchronous?
+- How will you capture an error in synchronous and asynchronous levels?
+- How many types of modules are used in Node.JS?
+- Have you used Crypto? How to stop a SQL Injection?
+- What is an error first callback?
+- Node.JS is a single threading and can it handle concurrency?
+- How can you avoid event looping?
+- What is the request module in Node.JS?
+- What is try catch error in Node.JS?
+- Can you define the ARROW function?
+- Can you explain the Call Back feature in Node JS?
+- Call Back is Synchronous or Asynchronous?
+- Difference between ES5 and ES6?
+- What is dependency injection?
+- Do you know about the Hierarchical Model controller concept?
+- Do you work on Design Form? For example: Users want to build any survey form?
+- What is application component level Architecture?
+- Are you using the same Node module for every service or Individually? Can we maintain it at global level?
