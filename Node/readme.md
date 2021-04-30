@@ -1,3 +1,6 @@
+- What is Event Emitter?
+- What is stream?
+- What is pipe?
 - What are pros and cons of Node.JS?
 - Whats are Micro services?
 - What does the promise do in Node.js?
