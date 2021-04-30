@@ -1,3 +1,4 @@
+- What is component Lifecycle?
 - What are React Hooks?
 - What are Class and Functional components in Reactjs?
 - Differentiate Stateful and stateless.
