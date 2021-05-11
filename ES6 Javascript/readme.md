@@ -12,7 +12,7 @@
 | 05. | Can you define the ARROW function? How it differs from regular functions? |
 | 06. | Call Back is Synchronous or Asynchronous? |
 | 07. | Difference between ES5 and ES6? What is new in ES6?|
-| 08. | [What is Closure and what problem it solves?] (#user-content-q-what-is-closure-and-what-problem-it-solves)|
+| 08. |[What is Closure and what problem it solves?](#user-content-q-what-is-closure-and-what-problem-it-solves)|
 | 09. | What are Promises? How to run some code after 10 Promises calls?|
 
 
