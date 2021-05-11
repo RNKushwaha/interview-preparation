@@ -47,11 +47,11 @@ Example: In this example, a variable mult is defined that is local to the functi
 ```js
 // Define the closure
 function multFn() {
-var mult = 9;
-return function(val) {
-	mult = mult * val;
-	return mult;
-}
+	var mult = 9;
+	return function(val) {
+		mult = mult * val;
+		return mult;
+	}
 }
 
 // Use the closure
@@ -68,10 +68,9 @@ Example: In this example, the rentPrice() function returns an object with three 
 // Define the closure
 var rentPrice = function(initialRent) {
    var rent = initialRent;
-
-	// Defien private variables for
-	// the closure
-	return {
+   // Defien private variables for
+   // the closure
+   return {
 	getRent: function() {
 		return console.log(rent);
 	},
@@ -83,7 +82,7 @@ var rentPrice = function(initialRent) {
 		rent -= amount;
 		console.log(rent);
 	}
-	}
+    }
 }
 
 var Rent = rentPrice(8000);
