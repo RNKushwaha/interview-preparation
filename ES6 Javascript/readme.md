@@ -6,6 +6,14 @@
 | Sr.No|  Questions       |
 |------|------------------|
 | 01. |[What is Object Destructuring in JavaScript?](#q-what-is-object-destructuring-in-javascript)|
+| 02. | What is the scope in the Javascript? |
+| 03. | What is the difference between synchronous and asynchronous functions? Give an example of asynchronous functions? In case of multiple requests to be done you use synchronous or asynchronous? |
+| 04.| How will you capture an error in synchronous and asynchronous levels? |
+| 05. | Can you define the ARROW function? How it differs from regular functions? |
+| 06. | Call Back is Synchronous or Asynchronous? |
+| 07. | Difference between ES5 and ES6? |
+| 08. | What is Closure? |
+| 09. | What are Promises? How to run some code after 10 Promises calls ?|
 
 
 <br/>
