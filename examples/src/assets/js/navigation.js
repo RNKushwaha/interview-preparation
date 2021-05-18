@@ -1,4 +1,5 @@
 "use strict";
+
 function getEl(id){
     return document.getElementById(id);
 }
@@ -12,48 +13,47 @@ function elSetStyle(el, display){
     return el.style.display = display;
 }
 
-let btnA = getEl('solution-popup')
-let popupA = getEl('solution-popup-html')
+let pageBtnA = getEl('solution-popup')
+let pagePopupA = getEl('solution-popup-html')
 
-let btnB = getEl('more-popup')
-let popupB = getEl('more-popup-html')
+let pageBtnB = getEl('more-popup')
+let pagePopupB = getEl('more-popup-html')
 
-let btnC = getEl('close-menu')
-let popupC = getEl('close-menu-html')
+let pageBtnC = getEl('close-menu')
+let pagePopupC = getEl('close-menu-html')
 
-let btnD = getEl('open-menu')
+let pageBtnD = getEl('open-menu')
 
-elClick(btnA, () => {
-    if (elGetStyle(popupA) == 'none') {
-        elSetStyle(popupA, '')
+elClick(pageBtnA, () => { 
+    if (elGetStyle(pagePopupA) == 'none') {
+        elSetStyle(pagePopupA, '')
     } else {
-        elSetStyle(popupA, 'none')
+        elSetStyle(pagePopupA, 'none')
     }
 });
 
-elClick(btnB, () => {
-    if (popupB.style.display == 'none') {
-        popupB.style.display = ''
+elClick(pageBtnB, () => {
+    if (elGetStyle(pagePopupB) == 'none') {
+        elSetStyle(pagePopupB, '');
     } else {
-        popupB.style.display = 'none'
+        elSetStyle(pagePopupB, 'none');
     }
 })
 
-elClick(btnC, () => {
-    if (popupC.style.display == 'none') {
-        popupC.style.display = ''
+elClick(pageBtnC, () => {
+    if (elGetStyle(pagePopupC) == 'none') {
+        elSetStyle(pagePopupC, '');
     } else {
-        popupC.style.display = 'none'
+        elSetStyle(pagePopupC, 'none');
     }
 })
 
-elClick(btnD, () => {
-    popupC.style.display = ''
+elClick(pageBtnD, () => {
+    elSetStyle(pagePopupC, '');
 })
 
 document.addEventListener("click", function(event) {
     if (event.target.closest("#solution-popup-html")) return;
-
-    popupA.style.display = 'none'
-    popupB.style.display = 'none'
+    elSetStyle(pagePopupA, 'none');
+    elSetStyle(pagePopupB, 'none');
 }, true);

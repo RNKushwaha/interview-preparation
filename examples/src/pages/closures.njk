@@ -1,0 +1,138 @@
+{% set title = 'Closure Implementation' %}
+{% extends "../layout.njk" %}
+
+{% block content %}
+
+<div class="lg:text-center mb-20">
+    <h2 class="text-3xl sm:text-4xl text-indigo-600 font-semibold tracking-wide uppercase">{{ title }}</h2>
+</div>
+
+<div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
+    <div class="w-full md:w-5/12 px-4 mb-4 md:mb-4">
+        <div class="py-8 px-8 max-w-sm mb-8 mx-auto bg-gray-50 rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <h2 id="labelA" class="block align-middle text-3xl sm:text-4xl text-indigo-600 mx-auto rounded-full sm:mx-0 sm:flex-shrink-0">0</h2>
+            <div class="text-center space-y-2 sm:text-left">
+                <div class="space-y-0.5">
+                <p class="text-lg text-black font-semibold">
+                    Box A Count
+                </p>
+                </div>
+                <button type="button" id="counterA" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Increase
+                </button>
+                <button type="button" id="resetA" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Reset
+                </button>
+            </div>
+        </div>
+        <div class="py-8 px-8 max-w-sm mb-8 mx-auto bg-gray-50 rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <h2 id="labelB" class="block align-middle text-3xl sm:text-4xl text-indigo-600 mx-auto rounded-full sm:mx-0 sm:flex-shrink-0">0</h2>
+            <div class="text-center space-y-2 sm:text-left">
+                <div class="space-y-0.5">
+                <p class="text-lg text-black font-semibold">
+                    Box B Count
+                </p>
+                </div>
+                <button type="button" id="counterB" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Increase
+                </button>
+                <button type="button" id="resetB" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full md:w-7/12 px-4 mb-4 md:mb-4">
+        <pre class="mt-0 pt-0">
+            <code class="language-js mt-0 pt-0">
+let counter = () => {
+    let count = 0;
+
+    return {
+        increase: function() {
+            return ++count;
+        },
+        reset: function() {
+            count = 0;
+            return count;
+        }
+    }
+};
+
+let btnA = getEl('counterA')
+let resetA = getEl('resetA')
+let labelA = getEl('labelA')
+
+let btnB = getEl('counterB')
+let resetB = getEl('resetB')
+let labelB = getEl('labelB')
+
+let counterA = counter();
+let counterB = counter();
+
+elClick(btnA, () => {
+    labelA.innerText = counterA.increase();
+})
+elClick(resetA, () => {
+    labelA.innerText = counterA.reset();
+})
+
+elClick(btnB, () => {
+    labelB.innerText = counterB.increase();
+})
+elClick(resetB, () => {
+    labelB.innerText = counterB.reset();
+})
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block footerscript%}
+
+<script type="text/javascript">
+    let counter = () => {
+        let count = 0;
+
+        return {
+            increase: function() {
+                return ++count;
+            },
+            reset: function() {
+                count = 0;
+                return count;
+            }
+        }
+    };
+
+    let btnA = getEl('counterA')
+    let resetA = getEl('resetA')
+    let labelA = getEl('labelA')
+
+    let btnB = getEl('counterB')
+    let resetB = getEl('resetB')
+    let labelB = getEl('labelB')
+
+    let counterA = counter();
+    let counterB = counter();
+
+    elClick(btnA, () => {
+        labelA.innerText = counterA.increase();
+    })
+    elClick(resetA, () => {
+        labelA.innerText = counterA.reset();
+    })
+
+    elClick(btnB, () => {
+        labelB.innerText = counterB.increase();
+    })
+    elClick(resetB, () => {
+        labelB.innerText = counterB.reset();
+    })
+</script>
+{% endblock %}
