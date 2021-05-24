@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" :class="{ 'dark': dark }" 
+  x-data="{ dark: !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}" >
 
 <head>
     <meta charset="utf-8" />
@@ -9,28 +10,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-   
     {% block header %}
     <link rel="stylesheet" href="./assets/css/style.min.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-coy.css" />
+    <script src="//cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     {% endblock %}
-
 </head>
 
-<body>
-    <div class="relative bg-white overflow-hidden">
-
+<body class="bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto">
         {% include "./navbar.njk" %}
-
-        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-8 sm:px-6 md:mt-16 lg:mt-10 lg:px-8">
+        <main class="mt-10 mx-auto px-4 sm:mt-8 sm:px-6 md:mt-16 lg:mt-10 lg:px-8">
             {% block content %}
-            
             {% endblock %}
         </main>
-    </div>
-
     {% include "./footer.njk" %}
-
+    </div>
     {% block footer %}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
     <script type="text/javascript" src="./assets/js/main.min.js"></script>

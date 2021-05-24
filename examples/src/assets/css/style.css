@@ -1,3 +1,68 @@
+:root {
+    --color-main-400: 163, 230, 53;
+    --color-main-500: 132, 204, 22;
+    --color-main-600: 101, 163, 13;
+    --color-main-700: 77, 124, 15;
+    --color-main-800: 63, 98, 18;
+
+    --color-primary: 132, 204, 22;
+    --color-secondary: 58, 41, 202;
+    --color-primary-text: 100, 158, 11;
+    --dark-color-primary: 101, 163, 13;
+    --dark-color-secondary: 81, 61, 249;
+
+    --color-border-primary: 77, 124, 15;
+    --color-border-secondary: 47, 25, 230;
+    --color-border-danger: 227, 52, 47;
+}
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer components {
+  .nav-btn {
+    @apply dark:text-gray-300 dark:hover:text-gray-200 text-gray-500 hover:text-gray-900 focus:ring-main-500 focus:outline-none focus:ring-2 focus:ring-offset-2 group rounded-md inline-flex items-center text-base font-medium;
+  }
+  .nav-has-dropdown {
+    @apply text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500;
+  }
+  .nav-dropdown-con {
+    @apply relative grid bg-white py-2;
+  }
+  .nav-dropdown-link {
+    @apply px-4 py-2 flex items-start text-base font-medium text-gray-900 hover:bg-gray-50;
+  }
+  .nav-dropdown-text {
+    @apply text-base font-medium text-gray-900 hover:text-gray-700;
+  }
+  .nav-dropdown {
+    @apply rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden;
+  }
+  .btn-secondary {
+    @apply whitespace-nowrap inline-flex items-center justify-center py-2 px-6 border border-secondary bg-secondary opacity-80 text-white font-medium rounded-md shadow-md hover:opacity-90 focus:outline-none focus:ring-2 focus:opacity-100 focus:ring-opacity-75;
+  } 
+  .btn-primary {
+      @apply whitespace-nowrap inline-flex items-center justify-center py-2 px-6 border border-primary bg-main text-white font-medium rounded-md shadow-md hover:bg-main-700 focus:outline-none focus:ring-2 focus:ring-main-500 focus:ring-opacity-75;
+  }
+  .btn-default {
+      @apply whitespace-nowrap inline-flex items-center justify-center py-2 px-6 border border-gray-300 bg-white text-gray-700 font-medium rounded-md shadow-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75;
+  }
+  .text-default{
+    @apply text-gray-700 dark:text-gray-200;
+  }
+  .text-main{
+    @apply text-primary opacity-95 hover:opacity-100 dark:text-gray-400 dark:hover:text-gray-200;
+  }
+  .link-main{
+    @apply text-primary-light opacity-90 hover:opacity-100 dark:text-primary dark:hover:bg-opacity-60 ;
+  }
+  .text-sec{
+    @apply text-secondary opacity-90 hover:opacity-100 dark:text-gray-400 dark:hover:text-gray-200;
+  }
+  .link-secondary{
+    @apply text-secondary opacity-90 hover:opacity-100 dark:text-secondary-dark dark:hover:bg-opacity-60;
+  }
+  .link-inverse{
+    @apply text-primary-light opacity-90 hover:opacity-100 dark:text-secondary-dark dark:hover:bg-opacity-60;
+  }
+}

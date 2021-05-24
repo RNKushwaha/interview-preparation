@@ -4,16 +4,52 @@ module.exports = {
   purge: {
     enabled: true,
     content: [
-    'build/*.html',
-    'build/assets/js/*.js',
-    ]
+      'build/*.html',
+      'build/assets/js/*.js',
+    ],
+    options: {
+      keyframes: true,
+    },
   },
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
+    borderColor: theme => ({
+      ...theme('colors'),
+      'primary': `rgb(var(--color-border-primary))`,
+      'secondary': `rgb(var(--color-border-secondary))`,
+      'danger': `rgb(var(--color-border-danger))`,
+    }),
     extend: {
       colors: {
-        'light-blue': colors.lightBlue,
-        cyan: colors.cyan,
+        main: {
+          400: `rgb(var(--color-main-400))`,
+          500: `rgb(var(--color-main-400))`,
+          DEFAULT: `rgb(var(--color-main-600))`,
+          700: `rgb(var(--color-main-700))`,
+          800: `rgb(var(--color-main-800))`,
+        },
+        primary: ({ opacityVariable, opacityValue }) => {
+          if (opacityValue !== undefined) {
+            return `rgba(var(--color-primary), ${opacityValue})`
+          }
+          if (opacityVariable !== undefined) {
+            return `rgba(var(--color-primary), var(${opacityVariable}, 1))`
+          }
+          return `rgb(var(--color-primary))`
+        },
+        secondary: ({ opacityVariable, opacityValue }) => {
+          if (opacityValue !== undefined) {
+            return `rgba(var(--color-secondary), ${opacityValue})`
+          }
+          if (opacityVariable !== undefined) {
+            return `rgba(var(--color-secondary), var(${opacityVariable}, 1))`
+          }
+          return `rgb(var(--color-secondary))`
+        },
+        'primary-light': `rgb(var(--color-primary-text))`,
+        'primary-dark': `rgb(var(--dark-color-primary))`,
+        'secondary-dark': `rgb(var(--dark-color-secondary))`,
+        gray: colors.coolGray,
       }
     }
   },
@@ -22,5 +58,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 };
