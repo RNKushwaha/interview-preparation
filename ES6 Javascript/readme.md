@@ -19,7 +19,9 @@
 <br/>
 
 ## Q. ***What is Object Destructuring in JavaScript?***
-Object destructuring is a technique to extract properties (single or multiple) from object and bind them to variables in a single line. It can set a default value to variable if the property does not exits in the object.
+Object destructuring is a technique to extract properties (single or multiple)
+from object and bind them to variables in a single line. It can set a default
+value to variable if the property does not exits in the object.
 
 ```js
 const hero = {
@@ -40,9 +42,14 @@ console.log(enemies);
 
 
 ## Q. ***What is Closure and what problem it solves?***
-In JavaScript, closures are defined as inner functions that have access to variables and parameters of outer function even after the outer function has returned. The below examples show the practical use of closures:
+In JavaScript, closures are defined as inner functions that have access to
+variables and parameters of outer function even after the outer function
+has returned. The below examples show the practical use of closures:
 
-Example: In this example, a variable mult is defined that is local to the function multFn and is only accessible inside this function. When an inner function is declared, JavaScript creates a closure where the inner function has access to the variable and its parameters.
+Example: In this example, a variable mult is defined that is local to the
+function multFn and is only accessible inside this function. When an inner
+function is declared, JavaScript creates a closure where the inner function
+has access to the variable and its parameters.
 
 ```js
 // Define the closure
@@ -60,66 +67,76 @@ console.log(mult(18));
 ```
 ### Practical Use cases:
 
-Using private variables and methods: In JavaScript, we can use private variables and methods using closures. The example below shows the use of private variables with closure.
+Using private variables and methods:
+In JavaScript, we can use private
+variables and methods using closures. The example below shows the use of
+private variables with closure.
 
-Example: In this example, the rentPrice() function returns an object with three methods: getRent(), incRent(), and decRent(). These three methods has access to the private variable rent. However, the code outside its scope cannot directly access this variable. Hence, we can mimic object oriented programming in JavaScript.
+Example: In this example, the rentPrice() function returns an object
+with three methods: getRent(), increaseRent(), and decreaseRent().
+These three methods has access to the private variable rent. However,
+the code outside its scope cannot directly access this variable.
+Hence, we can mimic object oriented programming in JavaScript.
 
 ```js
 // Define the closure
 var rentPrice = function(initialRent) {
    var rent = initialRent;
-   // Defien private variables for
+   // Define private variables for
    // the closure
    return {
-	getRent: function() {
-		return console.log(rent);
-	},
-	incRent: function(amount) {
-		rent += amount;
-		console.log(rent);
-	},
-	decRent: function(amount) {
-		rent -= amount;
-		console.log(rent);
-	}
+			getRent() {
+				return rent;
+			},
+			increaseRent(amount) {
+				rent += amount;
+			},
+			decreaseRent(amount) {
+				rent -= amount;
+			}
     }
 }
 
 var Rent = rentPrice(8000);
 
 // Access the private methods
-Rent.incRent(2000);
-Rent.decRent(1500);
-Rent.decRent(1000);
-Rent.incRent(2000);
+Rent.increaseRent(2000);
+Rent.decreaseRent(1500);
+Rent.decreaseRent(1000);
+Rent.increaseRent(2000);
 Rent.getRent();
 
 ```
 
-Maintaining state between each function call: Suppose there is a function and one would like it to multiply multiple values together. This could be done with the help of a global variable as they are accessible throughout the program. However, a drawback is that they are prone to change from anywhere in the code. This can be done alternatively using closures. Closures help in maintaining the state between function calls without using a global variable.
+Maintaining state between each function call:
+Suppose there is a function and one would like it to multiply
+multiple values together. This could be done with the help of
+a global variable as they are accessible throughout the program.
+However, a drawback is that they are prone to change from anywhere
+in the code. This can be done alternatively using closures.
+Closures help in maintaining the state between function calls
+without using a global variable.
 
 ```js
 
 (function() {
   var multFn = function multiply() {
-    // This variable is local to
-    // the closure and holds
-    // its value inbetween
-    // multiple calls
-  var mult = 9;
-  return function(val) {
-    mult = mult * val;
-    return mult;
-  }
-};
+	  // This `mult` variable is local to the closure and holds
+	  // its value inbetween multiple calls
+	  var mult = 9;
 
-var mult = multFn();
-	
-// Call the method
-// multiple times
-console.log(mult(2));
-console.log(mult(3));
-console.log(mult(5));
+	  return function(val) {
+	    // return mult * val;// this doesn't change mult variable hence no state
+	    return mult = mult * val;//changing mult variable hence next call will have new mult
+	  }
+	};
+
+	var mult = multFn();
+		
+	// Call the method multiple times
+	console.log(mult(2));
+	console.log(mult(3));
+	console.log(mult(5));
 }());
 
 ```
